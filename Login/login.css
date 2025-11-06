@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+.signup{
+    width: 200px;
+    box-shadow: 0 2 3px 0  rgba(0,0,0, 20);
+    background:#a3daec;
+    padding: 40px;
+    margin:5%;
+    border-radius: 7%;
+    filter: drop-shadow(0 0 10px #11a7d9);
+    animation: glow 1s infinite alternate;
+    box-shadow: #0082d9;
+}
+.btn{
+    border-radius: 7px;
+    padding: 5%;
+    margin: 7px 0;
+    width:90%;
+    color: aquamarine;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.input{
+    border-radius: 7px;
+    padding: 5%;
+    margin: 7px 0;
+    width:90%;
+    border: 1.5px solid #0e8feb;
+    outline: none;
+}
+.btn{
+    background:linear-gradient(221.79deg,#00bde3 13.62%,#0082d9 93.13%);
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0e8feb;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:aqua;
+    text-transform: uppercase;
+    align-content: space-between;
+}
+.navbar ul li::after{
+    content: '';
+    height: 1px;
+    width: 0;
+    background: aqua;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+@keyframes glow {
+    0%{
+        filter: drop-shadow(0 0 5px #11a7d9);
+    }
+    100%{
+        filter: drop-shadow(0 0 20px #11a7d9);
+    }
+}

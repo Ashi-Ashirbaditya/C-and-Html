@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="design.css">
+        <link rel="stylesheet" href="design2.css">
+    </head>
+    <body bgcolor="rgba(29, 213, 241)">
+        
+            <!-- preventBack -->
+    <script type = "text/javascript" >  
+        function preventBack(){
+          window.history.forward();
+        }   
+        setTimeout("preventBack()", 0);  
+        window.onunload = function () { null };  
+    </script> 
+    
+        <div class="header">
+            <div class="navbar">
+                <img src="logo.png" class="logio">
+                <ul>
+                    <li><a href="a"><img src="NRB 005 Co..png" style="width:50px;height:60px;"></a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="https://www.google.com/">Search</a></li>
+                    <li><a href="contact.jpg">Contact</a></li>
+                    <li><a href="about.jpg">About us</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">DROPDOWN
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        
+                        <div class="dropdown-content">
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                        </div>
+                      </div>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <h1> Welcome to the page</h1>
+            <div class="button clr">
+                <button type="button"><span></span>Next</button>
+                <button type="button"><span></span>More</button>
+            </div>
+         </div>
+    </body>
+</html>

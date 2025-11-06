@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+    <title>Bill</title>
+
+  <style>
+    div {
+  background-color: white;
+  width: 21 cm;
+  height:22.5cm;
+  border: 5px solid green;
+  padding: 30px;
+  spacing:20px;
+  margin: 0;}
+</style>
+
+<style>
+table, th, td {
+  border: 0.5px solid black;
+  border-spacing:0px;
+}
+input{
+border:hidden;
+size:100
+}
+</style>
+</head>
+
+<body>
+    <form method="post"><div>
+    
+    <label for="Name">Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label for="Ph_no">Ph_no:</label>
+    <input type="number"  name="ph_no" min="6000000000" max="9999999999" required><br><br>
+    
+   <u><label for="Product">List of items:</label></u><br><br>
+
+  <table style="width:100% ;border=green">
+      <tr>
+	<th>Sl.No</th>
+	<th>Products Name</th>
+	<th>Price</th>
+	<th>Quanity</th>
+	<th>Amount</th>
+      </tr>
+      <tr>
+	<td>01.</td>
+	<td><input type="text"></td>
+	<td><input type="text"</td>
+	<td><input type="text"</td>
+	<td><input type="text"</td>
+
+      </tr>
+      <tr>
+	<td>02.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text" ></td>
+      </tr>
+      <tr>
+	<td>03.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+       <tr>
+	<td>04.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>05.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text" ></td>
+      </tr>
+      <tr>
+	<td>06.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>07.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>08.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>09.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      <tr>
+	<td>10.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>11.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>12.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>13.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+       <tr>
+	<td>14.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>15.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>16.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>17.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>18.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+	      <tr>
+	<td>19.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<td>20.</td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+      </tr>
+      <tr>
+	<th colspan="4">Total</th>
+	<th><input type="text"></th>
+      </tr>	
+   </table><br><br><br>
+
+    <label for="Payment"><u>Payment Type </u></label><br>
+    <input type="radio" name="payment" id="cash">
+    <label for="Cash">Cash</label>
+    <input type="radio" name="payment" id="upi">
+    <label for="UPI">UPI</label><br><br><br>
+
+
+  <button onclick="window.print()" >Print</button>
+<p align="right"><b>Signature</b><p></div>
+</form>
+    
+</body>
+</html>

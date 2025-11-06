@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="login.css">
+	</head>	
+  <body>
+
+	    <!-- preventBack -->
+		<script type = "text/javascript" >  
+			function preventBack(){
+			  window.history.forward();
+			}   
+			setTimeout("preventBack()", 0);  
+			window.onunload = function () { null };  
+		</script> 
+		
+	 <div>
+        <script>
+            function verifyPassword()
+             {
+ 	          var pw = document.getElementById("pswd").value;
+ 		       //Check empty pPassword field
+ 		 		if(pw == "") {
+  	 	 		document.getElementById("message").innerHTML = "Please enter a Password!";
+     			return false;
+		                     }
+ 
+ 		     //minimum length of Password
+  		     if(pw.length < 8) {
+    		 document.getElementById("message").innerHTML = "Password length must be atleast 8 characters";
+    		 return false;
+  		                        }
+		         //maximum length of Password
+		       if(pw.length > 15) {
+     		   document.getElementById("message").innerHTML = "Password length must not exceed 15 characters";
+     		   return false;
+  		      } 
+		     //Pass word
+		     if(pw=="ASHI005S" ){
+     		 alert("Password is correct");
+ 		     }
+		     else{
+			 alert("Incorrect Password!!!!!");
+			 }
+  		        //Check empty User id
+  		        if(ui == "") {
+     		   document.getElementById("message").innerHTML = "Please enter UserId!";
+     		   return false;
+  		       }
+            }
+        </script>
+		<div class="navbar">
+			<ul>
+				<li></li>
+				<li><a href="https://www.google.com/" class="btn">Search</a></li>
+			</ul>
+		</div>
+		<center>
+			<form onsubmit ="return verifyPassword() " class="signup">
+				<!-- Enter User id & Password -->
+				  <input type = "email" id = "ui" value = "" class="input" placeholder="Enter your email"> <br><br><br>
+			   <input type = "password" id = "pswd" value = "" class="input" placeholder="Enter your Password"> <br><br>
+		   <div class="inv">
+				   <!-- Click to verify valid User id & Password -->
+			   <input type = "submit" value = "Submit" class="btn"><br><br>
+			   <span id = "message" style="color:red"> </span> <br><br>
+			   <hr color="aqua">
+				   <!-- Click to Login with Google -->
+			   <button type = "button" class="btn">Login with Google</button>
+			  </div>
+			</form>
+		</center>
+
+   </body>
+</html>
