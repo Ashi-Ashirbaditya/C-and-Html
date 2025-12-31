@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy New Year</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 360px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      animation: glow 2s infinite alternate;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 8px 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .name {
+      color: #ffdd57;
+      font-weight: bold;
+      animation: pop 0.6s ease;
+    }
+
+    .input-area {
+      margin-top: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: #ffdd57;
+      color: #000;
+    }
+
+    .wish {
+      display: none;
+      margin-top: 14px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 8px;
+      height: 8px;
+      opacity: 0.9;
+      animation: fall linear forwards;
+      z-index: 1;
+    }
+.whatsapp-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #25D366;
+  color: #ffffff;
+}
+
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 6px #ffdd57; }
+      to { text-shadow: 0 0 18px #ffdd57; }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.8); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>🎉 New Year Wishes 🎉</h1>
+
+    <!-- Input Section -->
+    <div class="input-area" id="inputArea">
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <button onclick="showWish()">Celebrate 🎆</button>
+    </div>
+
+    <!-- Wish Section -->
+    <div class="wish" id="wishBox">
+      <h1>Happy New Year, <span class="name" id="userName"></span>!</h1>
+      <p>
+        May this New Year bring you new hopes, new opportunities,
+        and endless reasons to smile ✨
+      </p>
+      <p>
+        Wishing you happiness, success, and good health all year 🌟
+      </p>
+      <p>— Best Wishes 💫<br>
+	From Ashirbaditya</p>
+
+<button class="whatsapp-btn" onclick="shareWhatsApp()">
+  📲 Share on WhatsApp
+</button>
+
+    </div>
+  </div>
+
+  <script>
+    function showWish() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (!name) return;
+
+      document.getElementById("userName").textContent = name;
+
+      // Hide input section
+      document.getElementById("inputArea").classList.add("hidden");
+
+      // Show wish
+      document.getElementById("wishBox").style.display = "block";
+
+      // Start confetti
+      startConfetti();
+    }
+
+    function startConfetti() {
+      const colors = ["#ffdd57", "#ff5f6d", "#36d1dc", "#c77dff", "#ffffff"];
+
+      for (let i = 0; i < 80; i++) {
+        const confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor =
+          colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => confetti.remove(), 5000);
+      }
+    }
+
+//Sharing button
+function shareWhatsApp() {
+    const name = document.getElementById("userName").textContent;
+
+    const message =
+      `🎉 Happy New Year, ${name}! 🎉\n\n` +
+      `May this New Year bring you happiness, success, and endless smiles ✨🌟\n\n` +
+      `Best Wishes 💫`;
+
+    const whatsappUrl =
+      "https://wa.me/?text=" + encodeURIComponent(message);
+
+    window.open(whatsappUrl, "_blank");
+  }
+  </script>
+
+</body>
+</html>
