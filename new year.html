@@ -204,9 +204,10 @@
     const name = document.getElementById("userName").textContent;
 
     const message =
-      `🎉 Happy New Year, ${name}! 🎉\n\n` +
+      `🎉 Happy New Year,` +
       `May this New Year bring you happiness, success, and endless smiles ✨🌟\n\n` +
-      `Best Wishes 💫`;
+      `Best Wishes 💫` +
+ `From ${name}! 🎉\n\n`;
 
 
     const encodedMessage = encodeURIComponent(message);
