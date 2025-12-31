@@ -199,7 +199,8 @@
     }
 
 //Sharing button
-function shareWhatsApp() {
+
+  function shareWhatsApp() {
     const name = document.getElementById("userName").textContent;
 
     const message =
@@ -207,11 +208,18 @@ function shareWhatsApp() {
       `May this New Year bring you happiness, success, and endless smiles ✨🌟\n\n` +
       `Best Wishes 💫`;
 
-    const whatsappUrl =
-      "https://wa.me/?text=" + encodeURIComponent(message);
 
-    window.open(whatsappUrl, "_blank");
+    const encodedMessage = encodeURIComponent(message);
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const url = isMobile
+      ? "whatsapp://send?text=" + encodedMessage
+      : "https://web.whatsapp.com/send?text=" + encodedMessage;
+
+    window.location.href = url;
   }
+
+
   </script>
 
 </body>
